@@ -60,7 +60,7 @@ public class TesteAbrirConta {
 
         abrirConta(serviceMock, numeroDaConta, nome, cpf, email);
     }
-
+    
     @NotNull
     private void abrirConta(ContaService service, int numeroDaConta, String nome, String cpf, String email) {
 
