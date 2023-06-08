@@ -38,8 +38,8 @@ public class TesteRealizarDeposito {
         Mockito.verify(serviceMock).realizarDeposito(numeroDaConta, valor);
         if (valor.compareTo(BigDecimal.ZERO) < 0) {
             System.out.println("Valor inválido para depósito!");
-        } else
-        System.out.println("Deposito realizado com sucesso!");
-
+        } else{
+            System.out.println("Deposito realizado com sucesso!");
+        }
     }
 }
