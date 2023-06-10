@@ -13,7 +13,6 @@ public class TesteAbrirConta {
     public void testAbrirContaComSucesso() {
 
         ContaService serviceMock = Mockito.mock(ContaService.class);
-        //todos os dados válidos
         int numeroDaConta = 1234;
         String nome = "João";
         String cpf = "12345678900";
@@ -28,7 +27,7 @@ public class TesteAbrirConta {
     @Test
     public void testAbrirContaComNumeroInvalido() {
         ContaService serviceMock = Mockito.mock(ContaService.class);
-        int numeroDaConta = -1; // número inválido
+        int numeroDaConta = -1;
         String nome = "Maria";
         String cpf = "98765432100";
         String email = "maria@example.com";
@@ -44,7 +43,7 @@ public class TesteAbrirConta {
         ContaService serviceMock = Mockito.mock(ContaService.class);
         int numeroDaConta = 1234;
         String nome = "Maria";
-        String cpf = "965874321"; // cpf com 9 dígitos
+        String cpf = "965874321";
         String email = "joao@hotmail.com";
 
         abrirConta(serviceMock, numeroDaConta, nome, cpf, email);
@@ -56,7 +55,7 @@ public class TesteAbrirConta {
         int numeroDaConta = 1234;
         String nome = "Maria";
         String cpf = "96587432100";
-        String email = "joaogmail.com"; // sem @
+        String email = "joaogmail.com";
 
         abrirConta(serviceMock, numeroDaConta, nome, cpf, email);
     }

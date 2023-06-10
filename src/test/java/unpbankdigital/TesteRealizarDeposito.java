@@ -12,7 +12,7 @@ public class TesteRealizarDeposito {
     @Test
     public void testRealizarDepositoComSucesso() {
         ContaService serviceMock = Mockito.mock(ContaService.class);
-        // Deposito realizado COM sucesso!
+
         Integer numeroDaConta = 2;
         BigDecimal valor = BigDecimal.valueOf(2.00);
 
@@ -29,7 +29,7 @@ public class TesteRealizarDeposito {
     @Test
     public void testRealizarDepositoSemSucesso() {
         ContaService serviceMock = Mockito.mock(ContaService.class);
-        // Deposito realizado SEM sucesso!
+
         Integer numeroDaConta = 22;
         BigDecimal valor = BigDecimal.valueOf(-2.00);
 
