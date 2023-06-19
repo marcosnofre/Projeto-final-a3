@@ -74,7 +74,7 @@ public class BytebankApplication {
         System.out.println("Digite o número da conta:");
         var numeroDaConta = teclado.nextInt();
         if (numeroDaConta <= 0) {
-            throw new RegraDeNegocioException("Número da conta inválido");
+            throw new RegraDeNegocioException.NumeroContaInvalidoException();
         }
 
         System.out.println("Digite o nome do cliente:");
@@ -83,13 +83,13 @@ public class BytebankApplication {
         System.out.println("Digite o cpf do cliente:");
         var cpf = teclado.next();
         if (cpf.length() != 11) {
-            throw new RegraDeNegocioException("CPF inválido");
+            throw new RegraDeNegocioException.CPFInvalidoException();
         }
 
         System.out.println("Digite o email do cliente:");
         var email = teclado.next();
         if (!email.contains("@")) {
-            throw new RegraDeNegocioException("Email inválido");
+            throw new RegraDeNegocioException.EmailInvalidoException();
         }
 
         service.abrir(new DadosAberturaConta(numeroDaConta, new DadosCadastroCliente(nome, cpf, email)));
